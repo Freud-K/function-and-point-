@@ -1,0 +1,11 @@
+int main(){
+Point a(4,5);
+Point *p1=&a;
+int (Point::*funcPtr)()const=&Point::getX;
+
+cout<<(a.*funcPtr)()<<endl;
+cout<<(p1->*funcPtr)()<<endl;
+cout<<a.getX()<<endl;
+cout<<p1->getX()<<endl;
+return 0;
+}
