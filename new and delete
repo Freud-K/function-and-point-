@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+class Point{
+public:
+Point():x(0),y(0){}
+Point(int x,int y):x(x),y(y){}
+~Point(){};
+int getX(){return x;}
+int getY(){return y;}
+void move(int newX, int newY){
+  x=newX;
+  y=newY;
+  }
+private:
+int x,y;
+
+};
+int main(){
+cout<<"Step ine:"<<endl;
+Point *p1=new Point;//没有参数列表，调用默认构造函数。
+delete p1;
+return 0;
+}
